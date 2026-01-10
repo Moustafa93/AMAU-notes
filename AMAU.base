@@ -1,0 +1,129 @@
+properties:
+  note.Notes:
+    displayName: Notes Completed
+  note.Course:
+    displayName: Course
+views:
+  - type: table
+    name: SOK - Lessons
+    filters:
+      and:
+        - file.folder == "20 Areas/AMAU/Student of Knowledge/Lessons"
+        - file.ext.containsAny("md", "pdf")
+    groupBy:
+      property: Course
+      direction: ASC
+    order:
+      - "#"
+      - title
+      - file.name
+      - Course
+      - Teacher
+      - Level
+      - Pathway
+      - Watched
+      - Notes
+      - anki
+      - last-reviewed
+      - source_url
+      - banner
+      - cover
+      - icon
+    sort:
+      - property: Level
+        direction: ASC
+      - property: Pathway
+        direction: ASC
+      - property: Course
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: title
+        direction: ASC
+      - property: "#"
+        direction: ASC
+    columnSize:
+      note.title: 367
+      file.name: 309
+      note.Teacher: 105
+      note.Level: 122
+      note.source_url: 118
+      note.banner: 108
+      note.cover: 109
+      note.icon: 88
+  - type: table
+    name: SOK - Courses
+    filters:
+      and:
+        - file.folder == "20 Areas/AMAU/Student of Knowledge/Courses"
+        - file.ext == "md"
+    order:
+      - "#"
+      - title
+      - file.name
+      - Teacher
+      - Level
+      - Pathway
+      - Watched
+      - Notes
+      - last-reviewed
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: "#"
+        direction: ASC
+      - property: title
+        direction: ASC
+      - property: Watched
+        direction: ASC
+      - property: Notes
+        direction: ASC
+      - property: Course
+        direction: ASC
+    columnSize:
+      note.title: 367
+      file.name: 197
+      note.Teacher: 105
+      note.Level: 122
+  - type: table
+    name: ILM - Lessons
+    filters:
+      and:
+        - file.folder == "20 Areas/AMAU/Ilm with AMAU"
+        - file.ext.containsAny("md", "pdf")
+    groupBy:
+      property: Semester
+      direction: ASC
+    order:
+      - "#"
+      - title
+      - file.name
+      - subject
+      - Teacher
+      - Semester
+      - Week
+      - Watched
+      - Notes
+      - anki
+      - last-reviewed
+      - source_url
+      - banner
+      - cover
+      - icon
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: title
+        direction: ASC
+      - property: "#"
+        direction: ASC
+    columnSize:
+      note.title: 367
+      file.name: 309
+      note.Teacher: 105
+      note.Week: 190
+      note.anki: 117
+      note.source_url: 104
+      note.banner: 76
+      note.cover: 76
+      note.icon: 71
