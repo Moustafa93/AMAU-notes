@@ -1,0 +1,16 @@
+---
+"#":
+title:
+subject:
+Teacher:
+Semester:
+Week:
+Watched:
+Notes:
+anki:
+last-reviewed:
+source_url:
+banner:
+cover:
+icon:
+---
